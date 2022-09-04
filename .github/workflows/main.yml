@@ -28,7 +28,7 @@ jobs:
         npm run build
     
     - name: Deploy
-      uses: Noostop/generate-from@mater
+      uses: Noostop/generate-from@master
       with:
         branch: pages
         folder: dist
