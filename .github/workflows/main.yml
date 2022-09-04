@@ -1,4 +1,4 @@
-name: NodeJS with Webpack
+name: CI
 
 on:
   push:
@@ -28,7 +28,7 @@ jobs:
         npm run build
     
     - name: Deploy
-      uses: Noostop/generate-from@2.0.0
+      uses: Noostop/generate-from@mater
       with:
         branch: pages
         folder: dist
