@@ -86,12 +86,12 @@ function App() {
 
   return (
     <div className="container mx-auto">
-      <div className="min-h-screen p-4 grid gap-x-5 grid-cols-2">
+      <div className="min-h-screen p-4 grid gap-5 grid-cols-1 md:grid-cols-2">
         <div className="h-full rounded-lg border-1 border-violet-600 shadow-lg bg-violet-100">
           <div className="p-4">
             <h3 className="text-2xl font-semibold py-2">菜单输入</h3>
             <textarea
-              className="w-full h-80 focus:ring focus:ring-violet-300 rounded-lg"
+              className="w-full h-60 border-violet-300 focus:ring focus:ring-violet-500 rounded-lg"
               name="message"
               id="message"
               onChange={handleChange}
@@ -106,17 +106,19 @@ function App() {
               </button>
             </div>
             <div className="mt-4">
-              <div className="border border-violet-600 rounded-lg w-full h-60">
+              <div className="w-full h-40">
                 <textarea
-                  className="w-full h-80 focus:ring focus:ring-violet-300 rounded-lg"
+                  className="w-full h-full border-violet-600 focus:ring focus:ring-violet-500 rounded-lg"
                   defaultValue="土豆两百八十斤，香菜一斤，小葱两斤，菜心七斤，包菜七斤，牛肉十斤，猪脚尖三斤，背篓肉三斤，鸭子三个，鲫鱼六条，鸡精十包，藤椒油两瓶，魔芋五斤，鸡蛋两板，牛腩五斤，鹅两斤，哨子两斤"
                 ></textarea>
               </div>
             </div>
           </div>
         </div>
-        <div className="h-full max-h-screen overflow-y-auto rounded-lg border-1 border-indigo-500 shadow-lg bg-slate-300">
-          <ul className="p-4">{JSON.stringify(listData)}</ul>
+        <div
+          className="h-60 md:h-96 overflow-y-auto rounded-lg border-1 border-indigo-500 shadow-lg bg-slate-300"
+        >
+          <div className="p-4">{JSON.stringify(listData)}</div>
         </div>
       </div>
     </div>
